@@ -1,0 +1,18 @@
+﻿<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="user">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+        <a class="nav-item nav-link" routerLink="/users" routerLinkActive="active">Usuarios</a>
+        <a class="nav-item nav-link" (click)="logout()">Salir</a>
+    </div>
+</nav>
+
+<div class="app-container" [ngClass]="{ 'bg-light': user }">
+    <alert></alert>
+    <router-outlet></router-outlet>
+</div>
+
+<!-- <div class="text-center mt-4">
+    <p>
+        <a href="https://perudev.pe" target="_top">perudev.pe</a>
+    </p>
+</div> -->
